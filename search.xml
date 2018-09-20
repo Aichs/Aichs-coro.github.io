@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+    
+    
+    <entry>
+        <title><![CDATA[Eclipse-Mac快捷键整理]]></title>
+        <url>http://yoursite.com/2018/09/19/Eclipse-Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</url>
+        <content type="html"></content>
+        
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[IDEA使用git上传-下载代码]]></title>
+        <url>http://yoursite.com/2018/08/15/IDEA%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0-%E4%B8%8B%E8%BD%BD%E4%BB%A3%E7%A0%81/</url>
+        <content type="html"><![CDATA[<p><img src="IDEA使用git上传-下载代码/5984b9b51af39.gif" alt=""></p>
+<p>码云</p>
+<p>在码云上新建一个项目。得到这个项目的地址</p>
+<p><img src="IDEA使用git上传-下载代码/新建项目.png" alt=""></p>
+<p><img src="IDEA使用git上传-下载代码/项目地址.png" alt=""></p>
+<p>然后在idea中点击VCS进行如下操作</p>
+<p><img src="IDEA使用git上传-下载代码/VCS.png" alt=""></p>
+<p>现在自己需要上传的项目的根目录点击OK</p>
+<p><img src="IDEA使用git上传-下载代码/选择项目.png" alt=""></p>
+<p>右击项目添加到缓存</p>
+<p><img src="IDEA使用git上传-下载代码/添加到缓存.png" alt=""></p>
+<p>再Commit</p>
+<p><img src="IDEA使用git上传-下载代码/Commit.png" alt=""></p>
+<p><img src="IDEA使用git上传-下载代码/添加路径.png" alt=""></p>
+<p>设置上传路径,URL填之前创建码云的项目地址</p>
+<p><img src="IDEA使用git上传-下载代码/url.png" alt=""></p>
+<p>上传</p>
+<p><img src="IDEA使用git上传-下载代码/上传.png" alt=""></p>
+<p>如果出现拒绝推送</p>
+<p><img src="IDEA使用git上传-下载代码/拒绝访问.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">解决方案如下：</span><br><span class="line"></span><br><span class="line">1.切换到自己项目所在的目录，右键选择GIT BASH Here，Idea中可使用Alt+F12</span><br><span class="line"></span><br><span class="line">2.在terminl窗口中依次输入命令：</span><br><span class="line"></span><br><span class="line">git pull</span><br><span class="line"></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line">git pull origin master --allow-unrelated-histories</span><br><span class="line"></span><br><span class="line">3.在idea中重新push自己的项目，成功！！！</span><br></pre></td></tr></table></figure>
+<p><img src="IDEA使用git上传-下载代码/成功.png" alt=""></p>
+<p>上传成功了，接下去码云的项目里看一下，发现已经有了刚刚上传的项目了</p>
+<p><img src="IDEA使用git上传-下载代码/码云.png" alt=""></p>
+]]></content>
+        
+        
+        <tags>
+            
+            <tag> -idea -git上传 -git下载 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[大数据第三天-Hadoop完全分布式部署]]></title>
+        <url>http://yoursite.com/2018/08/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%B8%89%E5%A4%A9-Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2/</url>
+        <content type="html"><![CDATA[<p><img src="大数据第三天-Hadoop完全分布式部署/5984ba3a5cbbe.gif" alt=""></p>
+<p>今天开始正式在CentOS7-64系统上搭建Hadoop</p>
+<p>1.查看当前主机名称</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostname</span><br></pre></td></tr></table></figure>
+<p>2.修改hostname</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl set-hostname [主机名称]</span><br></pre></td></tr></table></figure>
+<p>修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NETWORKING=yes</span><br><span class="line">HOSTNAME=node</span><br></pre></td></tr></table></figure>
+<p>3.使用root关闭防火墙</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop firewalld.service</span><br><span class="line">systemctl disable firewalld.service</span><br></pre></td></tr></table></figure>
+<p>4.克隆虚拟机</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">完整克隆-&gt;修改hostname为node2(hostnamectl set-hostnam[node2])</span><br></pre></td></tr></table></figure>
+<p>5.在node上生成公钥私钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+<p>6.配置host</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/hosts</span><br></pre></td></tr></table></figure>
+<p>然后在内添加服务器地址和名称(两台虚拟机都需要添加)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">192.168.xx.x1 node</span><br><span class="line">192.168.xx.x2 node2</span><br></pre></td></tr></table></figure>
+<p>7.免密登陆</p>
+<p>发送公钥到node2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id node2</span><br></pre></td></tr></table></figure>
+<p>8.测试由node访问node2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh node2</span><br></pre></td></tr></table></figure>
+<p><img src="大数据第三天-Hadoop完全分布式部署/测试访问.png" alt=""></p>
+<p>成功。</p>
+<p>9.在当前用户目录下创建resource文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/[当前用户]/resource</span><br></pre></td></tr></table></figure>
+<p>9.安装Hadoop</p>
+<p>通过xft的方式上传Hadoop.tar.gz到resource目录下</p>
+<p><img src="大数据第三天-Hadoop完全分布式部署/xftp上传.png" alt=""></p>
+<p>10.解压Hadoop-2.7.3.tar.gz文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Hadoop-2.7.3.tar.gz</span><br></pre></td></tr></table></figure>
+<p>10.配置hadoop-env.sh和yarn-env.sh </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim hadoop-env.sh </span><br><span class="line">vim yarn-env.sh</span><br></pre></td></tr></table></figure>
+<p>找到#export JAVA_HOME=${JAVA_HOME}修改为JDK实际安装路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_144/</span><br></pre></td></tr></table></figure>
+<p>11.配置核心文件core-size.xml    </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim core-size.xml</span><br></pre></td></tr></table></figure>
+<p>在configuration节点下添加如下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;property&gt;</span><br><span class="line">&lt;!--访问地址--&gt;</span><br><span class="line">&lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">&lt;value&gt;hdfs://node[主节点/主机名]:9000&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;!--临时数据文件--&gt;</span><br><span class="line">&lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">&lt;value&gt;/home/accp/hadoopdata&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+<p>12.配置文件系统hdfs-site.xml </p>
+<p>-在里面配置1个内容 意思为副本数，缺省值为3，改成1那么副本就是1，注意最大就是 3，超过3没有意义 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim hdfs-size.xml</span><br></pre></td></tr></table></figure>
+<p>修改内容如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">&lt;value&gt;1&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+<p>13.配置置yarn-site.xml（站点配置文件） </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim yarn-site.xml</span><br></pre></td></tr></table></figure>
+<p>添加如下内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--节点管理服务--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span><br><span class="line">&lt;value&gt;maperduce_shuffle&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;!--资源管理地址--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.resourcemanager.address&lt;/name&gt;</span><br><span class="line">&lt;value&gt;master:18040&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;!--资源执行地址--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.resourcemanager.scheduler.address&lt;/name&gt;</span><br><span class="line">&lt;value&gt;master:18030&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;!--资源追踪地址--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.resourcemanager.resource-tracker.address&lt;/name&gt;</span><br><span class="line">&lt;value&gt;master:18025&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;!--资源管理员地址--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.resourcemanager.admin.address&lt;/name&gt;</span><br><span class="line">&lt;value&gt;master:18141&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;!--web应用地址--&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;yarn.resourcemanager.webapp.address&lt;/name&gt;</span><br><span class="line">&lt;value&gt;master:18088&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+<p>14.配置mapreduce计算框架文件,系统有一个mapred-site.xml.template文件需要改名 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp mapred-site.xml.template mapred-site.xml</span><br><span class="line">vim mapred-site.xm</span><br></pre></td></tr></table></figure>
+<p>添加内容如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;maperduce.framework.name&lt;/name&gt;</span><br><span class="line">&lt;value&gt;yarn&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+<p>15.配置slave文件</p>
+<p>件该文件给出了Hadoop集群的slave节点列表，十分重要。因为启动 hadoop，系统总是根据当前slaves文件的slave节点名称启动集群，不在列表中的slave节点 不会视为计算节点  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim slaves</span><br></pre></td></tr></table></figure>
+<p>添加节点内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[节点名称]</span><br></pre></td></tr></table></figure>
+<p>16.配置环境变量(每台节点都需要配置)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#hadoop</span><br><span class="line">export HADOOP_HOME=/home/zyp/hadoop-2.6.0</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH</span><br></pre></td></tr></table></figure>
+<p>17.复制主节点的hadoop到子节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r /home/accp/resource/hadoop-2.7.3 accp@node:~/resource</span><br></pre></td></tr></table></figure>
+<p>18.重启所有节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<p>19.格式话文件系统</p>
+<p>在主节点执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdfs namenode -format</span><br></pre></td></tr></table></figure>
+<p>20.启动hadoop</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbin/staet-all.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">记录一下遇到的一些坑</span><br><span class="line">1.权限问题，这个特别重要，最好看一下hadoop目录的目录所有者，不然会出现各种各样的问题</span><br><span class="line">比如主节点找不到等等</span><br><span class="line">2.子节点找不到/没办法启动的问题，这个其实是操作上的失误，一般是datanode的clusterID 和 namenode的clusterID 不匹配。</span><br><span class="line">当我们执行文件系统格式化时，会在namenode数据文件夹（即配置文件中dfs.name.dir在本地系统的路径）中保存一个current/VERSION文件，记录namespaceID，标志了所有格式化的namenode版本。如果我们频繁的格式化namenode，那么datanode中保存（即dfs.data.dir在本地系统的路径）的current/VERSION文件只是你地第一次格式化时保存的namenode的ID，因此就会造成namenode和datanode之间的ID不一致。</span><br><span class="line">解决方法：</span><br><span class="line">删除DataNode的所有资料及将集群中每个datanode节点的/dfs/data/current中的VERSION删除，然后重新执行hadoop namenode -format进行格式化，重启集群，错误消失。</span><br></pre></td></tr></table></figure>
+]]></content>
+        
+        <categories>
+            
+            <category> 大数据 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> -大数据 -Hadoop -Linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[在CentOS上搭建GitLab]]></title>
+        <url>http://yoursite.com/2018/08/07/%E5%9C%A8CentOS%E4%B8%8A%E6%90%AD%E5%BB%BAGitLab/</url>
+        <content type="html"><![CDATA[<p><img src="在CentOS上搭建GitLab/timg.jpg" alt=""></p>
+<p>记录一下在CentOS服务器上搭建GitLab的过程</p>
+<p>首先说一下我的是CentOS7-64版本，腾讯云的10块钱服务器，实际上= =GitLab官网给的最低配置是4GB，而我2GB，为什么作死呢？其实只是试一下而已，也不指望这破服务器能做啥，而且我也在虚拟机上试过了。</p>
+<p>先安装依赖 AND 打开防火墙 AND HTTP AND SSH访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo yum install curl policycoreutils openssh-server openssh-clients   </span><br><span class="line"></span><br><span class="line">sudo systemctl enable sshd   </span><br><span class="line"></span><br><span class="line">sudo systemctl start sshd   </span><br><span class="line"></span><br><span class="line">sudo yum install postfix   </span><br><span class="line"></span><br><span class="line">sudo systemctl enable postfix   </span><br><span class="line"></span><br><span class="line">sudo systemctl start firewalld.service</span><br><span class="line"></span><br><span class="line">sudo firewall-cmd --permanent --add-service=http   </span><br><span class="line"></span><br><span class="line">sudo systemctl reload firewalld</span><br></pre></td></tr></table></figure>
+<p>更改yum源</p>
+<p>因为官方的软件源是国外的，访问会非常慢，甚至经常中断，所以要改成国内的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/gitlab_gitlab-ce.repo //打开配置文件</span><br></pre></td></tr></table></figure>
+<p>修改内容如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[gitlab-ce]</span><br><span class="line">    name=gitlab-ce</span><br><span class="line">    baseurl=http://mirrors.tuna.tsinghua.edu.cn/gitlab-ce/yum/el7</span><br><span class="line">    repo_gpgcheck=0</span><br><span class="line">    gpgcheck=0</span><br><span class="line">    enabled=1</span><br><span class="line">    gpgkey=https://packages.gitlab.com/gpg.key</span><br></pre></td></tr></table></figure>
+<p>然后就是执行安装了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install gitlab-ce</span><br></pre></td></tr></table></figure>
+<p>这个时候我们需要去直接启动GitLab的话会出现错误，所以需要为GitLab进行配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/gitlab</span><br><span class="line">sudo touch /etc/gitlab/gitlab.rb</span><br><span class="line">sudo chmod 600 /etc/gitlab/gitlab.rb</span><br><span class="line">sudo vim(gedit) /etc/gitlab/gitlab.rb  //打开配置文件(如果内容为空那就先启动一下GitLab)</span><br></pre></td></tr></table></figure>
+<p>找到external_url并修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">## GitLab URL</span><br><span class="line">##! URL on which GitLab will be reachable.</span><br><span class="line">##! For more details on configuring external_url see:</span><br><span class="line">##! https://docs.gitlab.com/omnibus/settings/configuration.html#configuring-the-external-url-for-gitlab</span><br><span class="line">external_url &apos;http://[你的服务器地址]:[端口号]&apos;</span><br></pre></td></tr></table></figure>
+<p>这里端口号为了避免和其他的业务冲突，推荐9090/8090等等</p>
+<p>然后启动GitLab</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br></pre></td></tr></table></figure>
+<p>然后就可以通过你设置的服务器地址:端口号来访问本地的GitLab了</p>
+<p>在第一次访问的时候会让你设置新的密码，默认用户名为root</p>
+<p>最后附上一些GitLab常用的命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl start                    # 启动所有 gitlab 组件；</span><br><span class="line">sudo gitlab-ctl stop                    # 停止所有 gitlab 组件；</span><br><span class="line">sudo gitlab-ctl restart                # 重启所有 gitlab 组件；</span><br><span class="line">sudo gitlab-ctl status                 # 查看服务状态；</span><br><span class="line">sudo gitlab-ctl reconfigure         # 启动服务；</span><br><span class="line">sudo vim /etc/gitlab/gitlab.rb      # 修改默认的配置文件；</span><br><span class="line">gitlab-rake gitlab:check SANITIZE=true --trace    # 检查gitlab；</span><br><span class="line">sudo gitlab-ctl tail                        # 查看日志；</span><br></pre></td></tr></table></figure>
+<p>访问出现502的问题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1.以上步骤出现了问题/尝试重启服务器</span><br><span class="line"></span><br><span class="line">2.内存炸了(官方推荐4GB起步)</span><br></pre></td></tr></table></figure>
+<p>溜了溜了</p>
+]]></content>
+        
+        <categories>
+            
+            <category> GitLab </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> -Liunx -CentOS -GitLab </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[大数据第二天-mysql安装]]></title>
+        <url>http://yoursite.com/2018/08/06/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%BA%8C%E5%A4%A9-mysql%E5%AE%89%E8%A3%85/</url>
+        <content type="html"><![CDATA[<p>由于CentOS7版本存在一个mariaDB 文件,早期版本自动安装好了mysql，mariaDB兼容mysql的，不考虑将mysql迁移到mariaDB配置，为了单独配置mysql所以先把mariaDB删了</p>
+<figure class="highlight plain"><figcaption><span>使用rpm -qa|grep 查询安装包</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep mariadb 查询安装包</span><br></pre></td></tr></table></figure>
+<h1 id=""><a href="#" class="headerlink" title=""></a><img src="大数据第二天-mysql安装/检查安装包.png" alt=""></h1><figure class="highlight plain"><figcaption><span>强制卸载</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -e --nodeps mariadb-libs-5.5.52-1.el7.x86_64 </span><br></pre></td></tr></table></figure>
+<h1 id="-1"><a href="#-1" class="headerlink" title=""></a><img src="大数据第二天-mysql安装/删除后结果.png" alt=""></h1><p>–开始安装</p>
+<p>拷贝mysql.rpm文件到服务器目录</p>
+<p><img src="大数据第二天-mysql安装/拷贝文件到服务器目录.png" alt=""><br>安装有顺序的  从common-&gt;libs-&gt;client-&gt;server 不能错<br><figure class="highlight plain"><figcaption><span>使用rpm -ivh</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm –ivh 文件名 依次安装,在安装到server的时候报错说缺少依赖，那么我们添加依赖即可，最后安装成功</span><br></pre></td></tr></table></figure></p>
+<h1 id="-2"><a href="#-2" class="headerlink" title=""></a><img src="大数据第二天-mysql安装/依次安装并添加依赖.png" alt=""></h1><figure class="highlight plain"><figcaption><span>启动数据库服务</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start</span><br></pre></td></tr></table></figure>
+<h1 id="-3"><a href="#-3" class="headerlink" title=""></a><img src="大数据第二天-mysql安装/启动服务.png" alt=""></h1><p>由于首次登录需要获取系统安装自动生成的临时密码,所以先去查看密码</p>
+<figure class="highlight plain"><figcaption><span>查看临时密码</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /var/log/mysqld.log 打开文件找到临时密码</span><br></pre></td></tr></table></figure>
+<h1 id="-4"><a href="#-4" class="headerlink" title=""></a><img src="大数据第二天-mysql安装/临时密码.png" alt=""></h1><figure class="highlight plain"><figcaption><span>关闭密码校验并修改密码</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set global validate_password_policy=0;</span><br><span class="line"></span><br><span class="line">SET PASSWORD =PASSWORD(&apos;密码&apos;);</span><br></pre></td></tr></table></figure>
+<p>然后如果需要用外部工具链接数据库的话还需要配置一些</p>
+<figure class="highlight plain"><figcaption><span>关闭防火墙</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">systemctl stop firewalld.service #停止firewall</span><br><span class="line"></span><br><span class="line">systemctl disable firewalld.service #禁止firewall开机启动</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>设置账户访问权限</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">update user set host = &apos;%&apos; where user = &apos;用户名&apos;;</span><br></pre></td></tr></table></figure>
+<h1 id="-5"><a href="#-5" class="headerlink" title=""></a><img src="大数据第二天-mysql安装/设置访问权限.png" alt=""></h1><p>如果上面不行就用授权法</p>
+<figure class="highlight plain"><figcaption><span>授权</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">如果，你想myuser使用mypassword从任何主机连接到mysql[服务器](http://hi.baidu.com/webhtml/show_838.html)的话。</span><br><span class="line"></span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;账户&apos;@&apos;%&apos; IDENTIFIED BY &apos;密码&apos; WITH GRANT OPTION;</span><br><span class="line"></span><br><span class="line">FLUSH   PRIVILEGES;</span><br><span class="line"></span><br><span class="line"> 如果你想允许用户myuser从ip为192.168.1.6的主机连接到mysql[服务器](http://hi.baidu.com/webhtml/show_838.html)，并使用mypassword作为密码</span><br><span class="line"></span><br><span class="line"> GRANT ALL PRIVILEGES ON *.* TO &apos;myuser&apos;@&apos;192.168.1.3&apos; IDENTIFIED BY &apos;mypassword&apos; WITH GRANT OPTION;</span><br><span class="line"></span><br><span class="line">FLUSH   PRIVILEGES;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="大数据第二天-mysql安装/授权.png" alt=""></p>
+<h1 id="-6"><a href="#-6" class="headerlink" title=""></a><img src="大数据第二天-mysql安装/结果.png" alt=""></h1><p>忘了一件事= =这个状态下的mysql是区分大小写的，所以我需要设置一下，不区分大小写</p>
+<figure class="highlight plain"><figcaption><span>设置不区分大小写</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">vim /etc/my.cnf 打开</span><br><span class="line"></span><br><span class="line">在最后一行添加</span><br><span class="line"></span><br><span class="line">lower_case_table_names=1 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="大数据第二天-mysql安装/设置大小写.png" alt=""><br>然后保存退出重启服务!<br>OJBK!</p>
+]]></content>
+        
+        <categories>
+            
+            <category> 大数据 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> -Linux -mysql </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[大数据第一天-Linux的基本操作]]></title>
+        <url>http://yoursite.com/2018/08/03/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%B8%80%E5%A4%A9-Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+        <content type="html"><![CDATA[<p>今天算是第一次正式接触linux了，之前虽然也用过，但大多都是用的图形化界面的那种，比如近年国内小有名气的deeping，不过现在的新版本的deeping是基于debian了。</p>
+<p>今天正式接触了CentOS，应该是红帽公司的免费Linux的发行版吧。记录一下今天用到的一些基本命令。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">--用户相关</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">sudo -i //进入管理员模式</span><br><span class="line"></span><br><span class="line">su root //临时管理员模式</span><br><span class="line"></span><br><span class="line">su [用户名] //切换模式(切换到普通模式)</span><br><span class="line"></span><br><span class="line">cd [路径]|..//定位到目标目录，点点是返回当前用户根目录</span><br><span class="line"></span><br><span class="line">ls //查看当前目录下的文件/文件夹信息</span><br><span class="line"></span><br><span class="line">mkdir [路径/文件夹名字] //在指定目录下创建文件夹名称</span><br><span class="line"></span><br><span class="line">vim [文件名] //打开文件，管理员模式下才可以读写，普通用户为只读</span><br><span class="line"></span><br><span class="line">以vim形式打开的文件进去默认为命令模式，i键为进入编辑模式，esc为返回命令模式。</span><br><span class="line">在命令模式下按Shift+；进入命令输入模式。w 保存，q 退出.</span><br><span class="line"></span><br><span class="line">chmod [可选项] </span><br><span class="line"></span><br><span class="line">可选项：</span><br><span class="line">  -c, --changes          like verbose but report only when a change is made (若该档案权限确实已经更改，才显示其更改动作)</span><br><span class="line">  -f, --silent, --quiet  suppress most error messages  （若该档案权限无法被更改也不要显示错误讯息）</span><br><span class="line">  -v, --verbose          output a diagnostic for every file processed（显示权限变更的详细资料）</span><br><span class="line">       --no-preserve-root  do not treat &apos;/&apos; specially (the default)</span><br><span class="line">       --preserve-root    fail to operate recursively on &apos;/&apos;</span><br><span class="line">       --reference=RFILE  use RFILE&apos;s mode instead of MODE values</span><br><span class="line">  -R, --recursive        change files and directories recursively （以递归的方式对目前目录下的所有档案与子目录进行相同的权限变更)</span><br><span class="line">       --help		显示此帮助信息</span><br><span class="line">       --version		显示版本信息</span><br><span class="line">mode ：</span><br><span class="line">权限设定字串，详细格式如下 ：</span><br><span class="line">[ugoa...][[+-=][rwxX]...][,...]，</span><br><span class="line"></span><br><span class="line">其中</span><br><span class="line">[ugoa...]</span><br><span class="line">u 表示该档案的拥有者，g 表示与该档案的拥有者属于同一个群体(group)者，o 表示其他以外的人，a 表示所有（包含上面三者）。</span><br><span class="line">[+-=]</span><br><span class="line">+ 表示增加权限，- 表示取消权限，= 表示唯一设定权限。</span><br><span class="line">  [rwxX]</span><br><span class="line">  r 表示可读取，w 表示可写入，x 表示可执行，X 表示只有当该档案是个子目录或者该档案已经被设定过为可执行。</span><br><span class="line">  	</span><br><span class="line">file...</span><br><span class="line">文件列表（单个或者多个文件、文件夹）</span><br><span class="line"></span><br><span class="line">--十位权限标识</span><br><span class="line"></span><br><span class="line">-rw------- (600)      只有拥有者有读写权限。</span><br><span class="line">-rw-r--r-- (644)      只有拥有者有读写权限；而属组用户和其他用户只有读权限。</span><br><span class="line">-rwx------ (700)     只有拥有者有读、写、执行权限。</span><br><span class="line">-rwxr-xr-x (755)    拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。</span><br><span class="line">-rwx--x--x (711)    拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。</span><br><span class="line">-rw-rw-rw- (666)   所有用户都有文件读、写权限。</span><br><span class="line">-rwxrwxrwx (777)  所有用户都有读、写、执行权限。</span><br><span class="line"></span><br><span class="line">--查看java版本</span><br><span class="line"></span><br><span class="line">java -version</span><br><span class="line"></span><br><span class="line">--解压命令</span><br><span class="line"></span><br><span class="line">tar  zxvf 文件名.tar.gz -C /路径名 //解压文件到指定路径</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h5>在CentOS上安装JDK and Tomcat</h5>
+
+<p>​    首先在CentOS上拿到ip地址，然后使用MobaXterm工具新建会话，地址就写刚刚拿到的Centos的ip，用户名是你的登录名，端口就是默认的22.</p>
+<p>​    回车之后MobaXterm会携带地址和访问用户名访问Centos，成功后输入密码。登录成功后在软件左面有服务器的目录菜单，jdk和tomcat可以使用yum命令在Centos的软件源下载，但是这里我用的是本地文件，可以直接把文件拖到目录菜单那一栏</p>
+<p><img src="大数据第一天-Linux的基本操作/目录路径.png" alt=""></p>
+<p>然后使用cd 命令定位到root目录开始解压到指定目录</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> tar -zvxf jdk-8u144-linux-x64.tar.gz -C /usr/java  //解压jdk到usr下的java目录</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">vim /etc//profile //然后使用vim命令打开etc目录下的profile文件配置jdk环境变量</span><br><span class="line"></span><br><span class="line">打开后按i进入编辑模式，在文件的最后一行添加以下信息</span><br><span class="line"></span><br><span class="line">export JAVA_HOME=/usr/java/jdk1.8.0_144</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br><span class="line"></span><br><span class="line">然后按Esc-&gt;Shlft+;进入命令模式，输入w保存，输入q退出，</span><br><span class="line"></span><br><span class="line">reboot //重启Centos</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>–配置Tomcat</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">tar -zvxf apache-tomcat-8.0.0-RC1.tar.gz^CC /usr/java //解压Tomcat到usr下的java目录</span><br><span class="line"></span><br><span class="line">cd /usr/java  //定位到我们刚刚解压的目录</span><br><span class="line"></span><br><span class="line">ls  //查看当前目录下的文件</span><br><span class="line">![](大数据第一天-Linux的基本操作/QQ图片20180803220539.png)</span><br><span class="line">cd apache-tomcat-8.0.0-RC1 //进入tomcat的目录</span><br><span class="line"> ![查看当前目录下的文件](大数据第一天-Linux的基本操作/Tomcat.png)</span><br><span class="line"> 最后定位到bin目录下,然后使用下面命令启动Tomcat</span><br><span class="line"> sh startup.sh</span><br></pre></td></tr></table></figure>
+<p>到这里差不多就结束了.附送一些其他资料<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">【Java基础,Java9,JavaWeb】www.atguigu.com/download.shtml </span><br><span class="line">【Linux,Oracle,MySQL,JDBC】http://url.cn/4ERsXa0</span><br><span class="line">【SSH,SSM,SpringBoot,SpringCloud】http://url.cn/4Ej6ePw</span><br><span class="line">【Redis,Shiro,MyBatis,JPA】http://url.cn/4EU3FCV</span><br><span class="line">【Git,SVN,Maven,Jenkins】http://url.cn/4Ej6ePw</span><br><span class="line">----------------------------------------------</span><br><span class="line">【HTML5,CSS3,JS,JQuery,AJAX】http://url.cn/4EHmHKZ</span><br><span class="line">【Vue,Node,mongoDB,Angular,React】http://url.cn/5ndEJKm</span><br><span class="line">【Android核心,影音,商城项目】http://url.cn/4ENsQjH</span><br><span class="line">万千谷粉为你推荐，好评如潮！技术交流群：715446567</span><br></pre></td></tr></table></figure></p>
+]]></content>
+        
+        <categories>
+            
+            <category> 大数据 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[IDEA-SSH编写踩到的一些坑(不定时更新)]]></title>
+        <url>http://yoursite.com/2018/08/01/IDEA-SSH%E7%BC%96%E5%86%99%E8%B8%A9%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91-%E4%B8%8D%E5%AE%9A%E6%97%B6%E6%9B%B4%E6%96%B0/</url>
+        <content type="html"><![CDATA[<p>-在今天写SSH项目的时候遇到一个问题，先上报错信息。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">java.lang.NullPointerException</span><br><span class="line">	at com.opensymphony.xwork2.spring.SpringObjectFactory.getClassInstance(SpringObjectFactory.java:230)</span><br><span class="line">	at com.opensymphony.xwork2.config.providers.XmlConfigurationProvider.verifyResultType(XmlConfigurationProvider.java:604)</span><br><span class="line">	at com.opensymphony.xwork2.config.providers.XmlConfigurationProvider.addResultTypes(XmlConfigurationProvider.java:574)</span><br><span class="line">	at com.opensymphony.xwork2.config.providers.XmlConfigurationProvider.addPackage(XmlConfigurationProvider.java:530)</span><br><span class="line">	at com.opensymphony.xwork2.config.providers.XmlConfigurationProvider.loadPackages(XmlConfigurationProvider.java:292)</span><br><span class="line">	at org.apache.struts2.config.StrutsXmlConfigurationProvider.loadPackages(StrutsXmlConfigurationProvider.java:112)</span><br><span class="line">	at com.opensymphony.xwork2.config.impl.DefaultConfiguration.reloadContainer(DefaultConfiguration.java:258)</span><br><span class="line">	at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:67)</span><br><span class="line">	at org.apache.struts2.dispatcher.Dispatcher.init_PreloadConfiguration(Dispatcher.java:445)</span><br><span class="line">	at org.apache.struts2.dispatcher.Dispatcher.init(Dispatcher.java:489)</span><br><span class="line">	at org.apache.struts2.dispatcher.ng.InitOperations.initDispatcher(InitOperations.java:74)</span><br><span class="line">	at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.init(StrutsPrepareAndExecuteFilter.java:57)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterConfig.initFilter(ApplicationFilterConfig.java:285)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterConfig.getFilter(ApplicationFilterConfig.java:266)</span><br><span class="line">	at org.apache.catalina.core.ApplicationFilterConfig.&lt;init&gt;(ApplicationFilterConfig.java:108)</span><br><span class="line">	at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4637)</span><br><span class="line">	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5282)</span><br><span class="line">	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)</span><br><span class="line">	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:754)</span><br><span class="line">	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:730)</span><br><span class="line">	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)</span><br><span class="line">	at org.apache.catalina.startup.HostConfig.manageApp(HostConfig.java:1736)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:498)</span><br><span class="line">	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)</span><br><span class="line">	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)</span><br><span class="line">	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)</span><br><span class="line">	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:483)</span><br><span class="line">	at org.apache.catalina.mbeans.MBeanFactory.createStandardContext(MBeanFactory.java:432)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:498)</span><br><span class="line">	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)</span><br><span class="line">	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)</span><br><span class="line">	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)</span><br><span class="line">	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)</span><br><span class="line">	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)</span><br><span class="line">	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)</span><br><span class="line">	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)</span><br><span class="line">	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</span><br><span class="line">	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</span><br><span class="line">	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</span><br><span class="line">	at java.lang.reflect.Method.invoke(Method.java:498)</span><br><span class="line">	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:361)</span><br><span class="line">	at sun.rmi.transport.Transport$1.run(Transport.java:200)</span><br><span class="line">	at sun.rmi.transport.Transport$1.run(Transport.java:197)</span><br><span class="line">	at java.security.AccessController.doPrivileged(Native Method)</span><br><span class="line">	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)</span><br><span class="line">	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:568)</span><br><span class="line">	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:826)</span><br><span class="line">	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:683)</span><br><span class="line">	at java.security.AccessController.doPrivileged(Native Method)</span><br><span class="line">	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:682)</span><br><span class="line">	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)</span><br><span class="line">	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)</span><br><span class="line">	at java.lang.Thread.run(Thread.java:748)</span><br><span class="line">2018</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src="IDEA-SSH编写踩到的一些坑-不定时更新/控制台输出信息.png" alt=""></p>
+<p><img src="IDEA-SSH编写踩到的一些坑-不定时更新/控制台输出信息2.png" alt=""></p>
+<p>空指针异常</p>
+<p><img src="IDEA-SSH编写踩到的一些坑-不定时更新/提供信息.png" alt=""></p>
+<p>其实这个时候在控制台日志已经为我提供了一个解决方案，意思就是你单词儿拼错了！快把下面这复制上去吧你个睿智！</p>
+<ul>
+<li><p>Validates struts.xml files for syntactic and reference errors.（index.jsp文件找不到）</p>
+<p><img src="IDEA-SSH编写踩到的一些坑-不定时更新/找不到文件.png" alt=""></p>
+</li>
+</ul>
+<p>在这里我的路径是对的，但是就提示说Struts配置文件导入失败！就很困惑，很迷？其实原因很简单</p>
+<p> Ctrl+Alt+Shlft+S-&gt;Modules-&gt;web-&gt;source Roots-&gt;勾选你的配置文件路径</p>
+<p><img src="IDEA-SSH编写踩到的一些坑-不定时更新/解决方案.png" alt=""></p>
+<p>Apply</p>
+<p><img src="IDEA-SSH编写踩到的一些坑-不定时更新/最终.png" alt=""></p>
+<p>OJBK!</p>
+]]></content>
+        
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[IDEA-SSM编写踩到的一些坑]]></title>
+        <url>http://yoursite.com/2018/07/31/IDEA-SSM%E7%BC%96%E5%86%99%E8%B8%A9%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/</url>
+        <content type="html"><![CDATA[<pre><code>在今天编写ssm项目的时候使用idea来作为开发工具，我也是最近才开始用idea的。
+</code></pre><p>idea和eclipse这些工具真的有很大的不同，刚刚由eclipse转过来的我就遇到了一些让人莫名其妙且恼火的事情。</p>
+<p></p><h5>Failed to load resource: the server responded with a status of 500/404 ()</h5><p></p>
+<p></p><h6>静态资源加载失败/找不到/</h6><br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213630.png" alt=""><br>    项目启动进来就报错资源加载失败!<br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213654.png" alt=""><br>    这里请求的路径是对的<br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213727.png" alt=""><br>    这是项目的目录结构，配置文件在sources目录下<br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213809.png" alt=""><br>    在jsp页面中我的引用路径<br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213845.png" alt=""><br>    路径是statics/下，和上图jsp页面对应，和页面请求对应。<p></p>
+<pre><code>综上所述，我的配置看起来是没有问题的，但是为什么会说资源加载失败呢？因为idea和其他开发工具不同，我在之前的项目中一直使用eclipse作为开发工具，配置文件可以直接放在src根目录下，但是idea不同，
+</code></pre><p>在未经设置的情况下，配置文件只能在sources文件夹下，而且，这个文件夹也是需要设置才可以被识别到的(其实也可能是后台代码写错了，比如sql语句)，其实做起来很简单,Ctrl+Alt+Shlft+s进入Project Structure面板,点击Modules-&gt;项目名(这里我的叫Flights)，<br>然后选中sources文件夹-&gt;Resources-&gt;Apply<br>    <img src="IDEA-SSM编写踩到的一些坑/截图.png" alt=""><br>    然后把项目跑起来,看看结果<br>    <img src="IDEA-SSM编写踩到的一些坑/结束.png" alt=""><br>    可以看到所有的数据都已经取到了，结束!</p>
+]]></content>
+        
+        
+    </entry>
+    
+    <entry>
+        <title><![CDATA[关与Hexo的一些常用命令收集]]></title>
+        <url>http://yoursite.com/2018/07/28/%E5%85%B3%E4%B8%8EHexo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%94%B6%E9%9B%86/</url>
+        <content type="html"><![CDATA[<p>###hexo的一些常用命令<br>-</p>
+<p><img src="关与Hexo的一些常用命令收集/微信图片_20180709223319.jpg" alt=""></p>
+<p>-初始<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g #安装  </span><br><span class="line">npm update hexo -g #升级  </span><br><span class="line">hexo init #初始化</span><br></pre></td></tr></table></figure><br>-简写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo p == hexo publish</span><br><span class="line">hexo g == hexo generate#生成</span><br><span class="line">hexo s == hexo server #启动服务预览</span><br><span class="line">hexo d == hexo deploy#部署</span><br></pre></td></tr></table></figure><br>-服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo server #Hexo 会监视文件变动并自动更新，您无须重启服务器。</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存 网页正常情况下可以忽略此条命令</span><br><span class="line">hexo g #生成静态网页</span><br><span class="line">hexo d #开始部署</span><br></pre></td></tr></table></figure><br>&lt;!- more - &gt;<br>-监控文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate #使用 Hexo 生成静态文件快速而且简单</span><br><span class="line">hexo generate --watch #监视文件变动</span><br></pre></td></tr></table></figure><br>-完成后部署<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">两个命令的作用是相同的</span><br><span class="line">hexo generate --deploy</span><br><span class="line">hexo deploy --generate</span><br></pre></td></tr></table></figure><br>-模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</span><br><span class="line">hexo deploy #将.deploy目录部署到GitHub</span><br><span class="line"></span><br><span class="line">hexo new [layout] &lt;title&gt;</span><br><span class="line">hexo new photo &quot;My Gallery&quot;</span><br><span class="line">hexo new &quot;Hello World&quot; --lang tw</span><br></pre></td></tr></table></figure><br>-设置文章摘要<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">以上是文章摘要 &lt;!--more--&gt; 以下是余下全文 </span><br></pre></td></tr></table></figure><br>-推送到服务器上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo n #写文章</span><br><span class="line">hexo g #生成</span><br><span class="line">hexo d #部署 #可与hexo g合并为 hexo d -g</span><br></pre></td></tr></table></figure></p>
+<p>  -开启rss<br>  编辑hexo/_config.yml，添加如下代码：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rss: /atom.xml #rss地址  默认即可</span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<p>  -开启评论<br>1.我使用多说代替自带的评论，在多说 网站注册 &gt; 后台管理 &gt; 添加新站点 &gt; 工具 === 复制通用代码 里面有 short_name</p>
+<p>在根目录 _config.yml 添加一行 disqus_shortname: jslite 是在多说注册时产生的</p>
+<p>复制到 themes\landscape\layout_partial\article.ejs<br>把<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  &lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">&lt;section id=&quot;comments&quot;&gt;</span><br><span class="line">&lt;div id=&quot;disqus_thread&quot;&gt;</span><br><span class="line">  &lt;noscript&gt;Please enable JavaScript to view the &lt;a href=&quot;//disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">  </span><br></pre></td></tr></table></figure><br>  改为<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  &lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname)&#123; %&gt;</span><br><span class="line">  &lt;section id=&quot;comments&quot;&gt;</span><br><span class="line">    &lt;!-- 多说评论框 start --&gt;</span><br><span class="line">    &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;!-- 多说评论框 end --&gt;</span><br><span class="line">    &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var duoshuoQuery = &#123;short_name:&apos;&lt;%= config.disqus_shortname %&gt;&apos;&#125;;</span><br><span class="line">      (function() &#123;</span><br><span class="line">        var ds = document.createElement(&apos;script&apos;);</span><br><span class="line">        ds.type = &apos;text/javascript&apos;;ds.async = true;</span><br><span class="line">        ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;</span><br><span class="line">        ds.charset = &apos;UTF-8&apos;;</span><br><span class="line">        (document.getElementsByTagName(&apos;head&apos;)[0] </span><br><span class="line">         || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);</span><br><span class="line">      &#125;)();</span><br><span class="line">      &lt;/script&gt;</span><br><span class="line">    &lt;!-- 多说公共JS代码 end --&gt;</span><br><span class="line">  &lt;/section&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line">  </span><br></pre></td></tr></table></figure></p>
+]]></content>
+        
+        
+    </entry>
+    
+    
+    
+    
+    <entry>
+        <title><![CDATA[关于我]]></title>
+        <url>http://yoursite.com/about/index.html</url>
+        <content type="html"><![CDATA[<p><img src="index/59834b996af31.gif" alt=""></p>
+<figure class="highlight plain"><figcaption><span>关于我</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">	&#123; </span><br><span class="line"></span><br><span class="line">​		name: &quot;Aich / Geekaholic&quot;,</span><br><span class="line">		birthday: &quot;1994-10-02&quot;, </span><br><span class="line">		gender: &quot;男&quot;, </span><br><span class="line">		address: &quot;山东省济宁市&quot;, </span><br><span class="line">		education: &quot;专科 / 徐州矿业大学&quot;, </span><br><span class="line">		major: &quot;软件工程&quot;, </span><br><span class="line">		Github: &quot;https://github.com/Aichs&quot;, </span><br><span class="line">		Microblog: &quot;https://weibo.com/u/3334540900&quot;,</span><br><span class="line">		skills: [&quot;HTML&quot;, &quot;CSS&quot;, &quot;JavaScript&quot;, &quot;jQuery&quot;, &quot;Java&quot;], </span><br><span class="line">		blog: &quot;https://coding.net/u/Aich&quot;, </span><br><span class="line">		Email: &quot;mingyuejiaobai@icloud.com&quot;, </span><br><span class="line">		description: [&quot;朝闻道,夕死可矣&quot;] </span><br><span class="line">	&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
+        <title><![CDATA[categories]]></title>
+        <url>http://yoursite.com/categories/index.html</url>
+        <content type="html"></content>
+    </entry>
+    
+    <entry>
+        <title><![CDATA[tags]]></title>
+        <url>http://yoursite.com/tags/index.html</url>
+        <content type="html"></content>
+    </entry>
+    
+    
+</search>

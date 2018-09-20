@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Aich的博客</title>
+  
+  <subtitle>繁星花园</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-09-19T02:45:27.472Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Aich</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Eclipse-Mac快捷键整理</title>
+    <link href="http://yoursite.com/2018/09/19/Eclipse-Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/"/>
+    <id>http://yoursite.com/2018/09/19/Eclipse-Mac快捷键整理/</id>
+    <published>2018-09-18T17:09:21.000Z</published>
+    <updated>2018-09-19T02:45:27.472Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA使用git上传-下载代码</title>
+    <link href="http://yoursite.com/2018/08/15/IDEA%E4%BD%BF%E7%94%A8git%E4%B8%8A%E4%BC%A0-%E4%B8%8B%E8%BD%BD%E4%BB%A3%E7%A0%81/"/>
+    <id>http://yoursite.com/2018/08/15/IDEA使用git上传-下载代码/</id>
+    <published>2018-08-15T10:11:28.000Z</published>
+    <updated>2018-08-16T07:51:15.936Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;IDEA使用git上传-下载代码/5984b9b51af39.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;码云&lt;/p&gt;
+&lt;p&gt;在码云上新建一个项目。得到这个项目的地址&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;IDEA使用git上传-下载代码/新建项目.png&quot; a
+      
+    
+    </summary>
+    
+    
+      <category term="-idea -git上传 -git下载" scheme="http://yoursite.com/tags/idea-git%E4%B8%8A%E4%BC%A0-git%E4%B8%8B%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大数据第三天-Hadoop完全分布式部署</title>
+    <link href="http://yoursite.com/2018/08/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%B8%89%E5%A4%A9-Hadoop%E5%AE%8C%E5%85%A8%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2/"/>
+    <id>http://yoursite.com/2018/08/08/大数据第三天-Hadoop完全分布式部署/</id>
+    <published>2018-08-08T12:59:22.000Z</published>
+    <updated>2018-08-10T07:03:22.609Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;大数据第三天-Hadoop完全分布式部署/5984ba3a5cbbe.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;今天开始正式在CentOS7-64系统上搭建Hadoop&lt;/p&gt;
+&lt;p&gt;1.查看当前主机名称&lt;/p&gt;
+&lt;figure class=&quot;highli
+      
+    
+    </summary>
+    
+      <category term="大数据" scheme="http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+      <category term="-大数据 -Hadoop -Linux" scheme="http://yoursite.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE-Hadoop-Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在CentOS上搭建GitLab</title>
+    <link href="http://yoursite.com/2018/08/07/%E5%9C%A8CentOS%E4%B8%8A%E6%90%AD%E5%BB%BAGitLab/"/>
+    <id>http://yoursite.com/2018/08/07/在CentOS上搭建GitLab/</id>
+    <published>2018-08-07T10:07:28.000Z</published>
+    <updated>2018-08-07T11:22:22.718Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;在CentOS上搭建GitLab/timg.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;记录一下在CentOS服务器上搭建GitLab的过程&lt;/p&gt;
+&lt;p&gt;首先说一下我的是CentOS7-64版本，腾讯云的10块钱服务器，实际上= =GitLab官网给的最低
+      
+    
+    </summary>
+    
+      <category term="GitLab" scheme="http://yoursite.com/categories/GitLab/"/>
+    
+    
+      <category term="-Liunx -CentOS -GitLab" scheme="http://yoursite.com/tags/Liunx-CentOS-GitLab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大数据第二天-mysql安装</title>
+    <link href="http://yoursite.com/2018/08/06/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%BA%8C%E5%A4%A9-mysql%E5%AE%89%E8%A3%85/"/>
+    <id>http://yoursite.com/2018/08/06/大数据第二天-mysql安装/</id>
+    <published>2018-08-06T06:09:28.000Z</published>
+    <updated>2018-08-10T07:02:57.274Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;由于CentOS7版本存在一个mariaDB 文件,早期版本自动安装好了mysql，mariaDB兼容mysql的，不考虑将mysql迁移到mariaDB配置，为了单独配置mysql所以先把mariaDB删了&lt;/p&gt;
+&lt;figure class=&quot;highlight pla
+      
+    
+    </summary>
+    
+      <category term="大数据" scheme="http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+      <category term="-Linux -mysql" scheme="http://yoursite.com/tags/Linux-mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大数据第一天-Linux的基本操作</title>
+    <link href="http://yoursite.com/2018/08/03/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%B8%80%E5%A4%A9-Linux%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2018/08/03/大数据第一天-Linux的基本操作/</id>
+    <published>2018-08-03T11:05:05.000Z</published>
+    <updated>2018-08-10T07:03:23.969Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天算是第一次正式接触linux了，之前虽然也用过，但大多都是用的图形化界面的那种，比如近年国内小有名气的deeping，不过现在的新版本的deeping是基于debian了。&lt;/p&gt;
+&lt;p&gt;今天正式接触了CentOS，应该是红帽公司的免费Linux的发行版吧。记录一下今天
+      
+    
+    </summary>
+    
+      <category term="大数据" scheme="http://yoursite.com/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA-SSH编写踩到的一些坑(不定时更新)</title>
+    <link href="http://yoursite.com/2018/08/01/IDEA-SSH%E7%BC%96%E5%86%99%E8%B8%A9%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91-%E4%B8%8D%E5%AE%9A%E6%97%B6%E6%9B%B4%E6%96%B0/"/>
+    <id>http://yoursite.com/2018/08/01/IDEA-SSH编写踩到的一些坑-不定时更新/</id>
+    <published>2018-08-01T13:22:04.000Z</published>
+    <updated>2018-08-02T06:50:04.300Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;-在今天写SSH项目的时候遇到一个问题，先上报错信息。 &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span 
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA-SSM编写踩到的一些坑</title>
+    <link href="http://yoursite.com/2018/07/31/IDEA-SSM%E7%BC%96%E5%86%99%E8%B8%A9%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9D%91/"/>
+    <id>http://yoursite.com/2018/07/31/IDEA-SSM编写踩到的一些坑/</id>
+    <published>2018-07-31T13:22:04.000Z</published>
+    <updated>2018-08-03T14:12:07.016Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;pre&gt;&lt;code&gt;在今天编写ssm项目的时候使用idea来作为开发工具，我也是最近才开始用idea的。
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;idea和eclipse这些工具真的有很大的不同，刚刚由eclipse转过来的我就遇到了一些让人莫名其妙且恼火的事情。&lt;/p&gt;
+&lt;p&gt;&lt;/p
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关与Hexo的一些常用命令收集</title>
+    <link href="http://yoursite.com/2018/07/28/%E5%85%B3%E4%B8%8EHexo%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%94%B6%E9%9B%86/"/>
+    <id>http://yoursite.com/2018/07/28/关与Hexo的一些常用命令收集/</id>
+    <published>2018-07-28T15:45:49.000Z</published>
+    <updated>2018-08-02T12:05:04.668Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;###hexo的一些常用命令&lt;br&gt;-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;关与Hexo的一些常用命令收集/微信图片_20180709223319.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;-初始&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;tabl
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
