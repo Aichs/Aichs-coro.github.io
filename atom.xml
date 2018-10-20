@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://%E8%89%BE%E5%B8%8C.xyz/"/>
-  <updated>2018-08-16T07:51:15.936Z</updated>
+  <updated>2018-10-20T07:39:05.319Z</updated>
   <id>https://艾希.xyz/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="https://%E8%89%BE%E5%B8%8C.xyz/2018/10/20/%E6%B5%8B%E8%AF%95/"/>
+    <id>https://艾希.xyz/2018/10/20/测试/</id>
+    <published>2018-10-20T07:36:31.000Z</published>
+    <updated>2018-10-20T07:39:05.319Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;测试/屏幕快照 2018-10-20 下午3.38.54.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>IDEA使用git上传-下载代码</title>
@@ -96,7 +116,7 @@
     <link href="https://%E8%89%BE%E5%B8%8C.xyz/2018/08/06/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%AC%E4%BA%8C%E5%A4%A9-mysql%E5%AE%89%E8%A3%85/"/>
     <id>https://艾希.xyz/2018/08/06/大数据第二天-mysql安装/</id>
     <published>2018-08-06T06:09:28.000Z</published>
-    <updated>2018-10-20T07:32:18.766Z</updated>
+    <updated>2018-10-20T07:34:11.055Z</updated>
     
     <summary type="html">
     

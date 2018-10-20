@@ -156,7 +156,7 @@
     
 <li class="widget widget-normal archive">
   <h3 class="fa fa-archive widget-title">Archives</h3>
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/"><i class="fa" aria-hidden="true">August 2018</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/"><i class="fa" aria-hidden="true">July 2018</i></a><span class="archive-list-count">2</span></li></ul>
+    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/"><i class="fa" aria-hidden="true">October 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/"><i class="fa" aria-hidden="true">August 2018</i></a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/"><i class="fa" aria-hidden="true">July 2018</i></a><span class="archive-list-count">2</span></li></ul>
 </li>
 
 
@@ -175,7 +175,7 @@
   <h3 class="fa fa-tags widget-title">Tag Cloud</h3>
   <div class="tagcloud-content">
     
-      <a href="/tags/idea-git上传-git下载/" style="font-size: 0.14rem; color: #69c">-idea -git上传 -git下载</a> <a href="/tags/Linux/" style="font-size: 0.14rem; color: #69c">Linux</a> <a href="/tags/大数据-Hadoop-Linux/" style="font-size: 0.14rem; color: #69c">-大数据 -Hadoop -Linux</a> <a href="/tags/Liunx-CentOS-GitLab/" style="font-size: 0.14rem; color: #69c">-Liunx -CentOS -GitLab</a> <a href="/tags/Linux-mysql/" style="font-size: 0.14rem; color: #69c">-Linux -mysql</a>
+      <a href="/tags/idea-git上传-git下载/" style="font-size: 0.14rem; color: #69c">-idea -git上传 -git下载</a> <a href="/tags/Liunx-CentOS-GitLab/" style="font-size: 0.14rem; color: #69c">-Liunx -CentOS -GitLab</a> <a href="/tags/Linux/" style="font-size: 0.14rem; color: #69c">Linux</a> <a href="/tags/大数据-Hadoop-Linux/" style="font-size: 0.14rem; color: #69c">-大数据 -Hadoop -Linux</a> <a href="/tags/Linux-mysql/" style="font-size: 0.14rem; color: #69c">-Linux -mysql</a>
   </div>
 </li>
 
@@ -260,9 +260,9 @@
 <h1 id="-5"><a href="#-5" class="headerlink" title=""></a><img src="大数据第二天-mysql安装/设置访问权限.png" alt=""></h1><p>如果上面不行就用授权法</p>
 <figure class="highlight plain"><figcaption><span>授权</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">如果，你想myuser使用mypassword从任何主机连接到mysql[服务器](http://hi.baidu.com/webhtml/show_838.html)的话。</span><br><span class="line"></span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;账户&apos;@&apos;%&apos; IDENTIFIED BY &apos;密码&apos; WITH GRANT OPTION;</span><br><span class="line"></span><br><span class="line">FLUSH   PRIVILEGES;</span><br><span class="line"></span><br><span class="line"> 如果你想允许用户myuser从ip为192.168.1.6的主机连接到mysql[服务器](http://hi.baidu.com/webhtml/show_838.html)，并使用mypassword作为密码</span><br><span class="line"></span><br><span class="line"> GRANT ALL PRIVILEGES ON *.* TO &apos;myuser&apos;@&apos;192.168.1.3&apos; IDENTIFIED BY &apos;mypassword&apos; WITH GRANT OPTION;</span><br><span class="line"></span><br><span class="line">FLUSH   PRIVILEGES;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><img src="大数据第二天-mysql安装/授权.png" alt=""></p>
-<h1 id="-6"><a href="#-6" class="headerlink" title=""></a><img src="/大数据第二天-mysql安装/结果.png" alt=""></h1><p>忘了一件事= =这个状态下的mysql是区分大小写的，所以我需要设置一下，不区分大小写</p>
+<h1 id="-6"><a href="#-6" class="headerlink" title=""></a><img src="大数据第二天-mysql安装/结果.png" alt=""></h1><p>忘了一件事= =这个状态下的mysql是区分大小写的，所以我需要设置一下，不区分大小写</p>
 <figure class="highlight plain"><figcaption><span>设置不区分大小写</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">vim /etc/my.cnf 打开</span><br><span class="line"></span><br><span class="line">在最后一行添加</span><br><span class="line"></span><br><span class="line">lower_case_table_names=1 </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p><img src="/大数据第二天-mysql安装/设置大小写.png" alt=""><br>然后保存退出重启服务!<br>OJBK!</p>
+<p><img src="大数据第二天-mysql安装/设置大小写.png" alt=""><br>然后保存退出重启服务!<br>OJBK!</p>
 
         </div>
         <div id="post-footer">
@@ -286,7 +286,7 @@
                 
                 <li>Published Date: <span>2018-08-06  14:09:28</span></li>
                 
-                <li>Updated Date: <span>2018-10-20  15:32:18</span></li>
+                <li>Updated Date: <span>2018-10-20  15:34:11</span></li>
                 
                 <li class="post-category">
                     Categories:

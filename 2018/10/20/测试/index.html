@@ -20,7 +20,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>Archives | Aich的博客</title>
+<title>测试 | Aich的博客</title>
 
 <link rel="alternate" href="/atom.xml" title="Aich的博客" type="application/atom+xml">
 
@@ -29,9 +29,10 @@
 
     
 <link rel="stylesheet" href="/css/base.css">
-<link rel="stylesheet" href="/css/pages/archive.css">
+<link rel="stylesheet" href="/css/pages/post.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/thirdParty/highlight/github.css">
+<link rel="stylesheet" href="/css/pages/comments.css">
 
     <!--script-->
 
@@ -53,6 +54,23 @@
 
 <!--<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>-->
 
+
+<script src="/js/thirdParty/gitment.browser.min.js"></script>
+<script>
+  var labels = "blog,gitment";
+  labels = labels.split(",");
+  var gitment = new Gitment({
+    id: window.location.pathname,
+    owner: "Aichs",
+    repo: "Aichs.github.io",
+    oauth: {
+      client_id: "0edac52488f6e1d3aaf0",
+      client_secret: "568d8e7c66238506655b13a321cb04878782084e"
+    },
+    perPage: "20",
+    labels: labels
+  });
+</script>
 
     
 <script>
@@ -178,15 +196,16 @@
 </ul>
 
 
-        
-<div id="main">
-  <div id="post-list">
-    <ul class="archives-post-list">
-        
-      <li class="post-items" _href="/2018/10/20/测试/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">测试</h2>
-          <div class="article-meta">
+        <div id="main">
+    <article id="post">
+        <div id="post-header">
+
+            <h1 id="测试">
+                
+                测试
+                
+            </h1>
+            <div class="article-meta">
     
     
     <span class="categories-meta fa-wrap">
@@ -207,7 +226,7 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">10/20</span>
+        <span class="date-meta ">2018/10/20</span>
     </span>
     
     
@@ -220,324 +239,82 @@
     
 </div>
 
-      </li>
+            
+            
+        </div>
         
-      <li class="post-items" _href="/2018/08/15/IDEA使用git上传-下载代码/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">IDEA使用git上传-下载代码</h2>
-          <div class="article-meta">
+        <div id="post-body">
+            <p><img src="测试/屏幕快照 2018-10-20 下午3.38.54.png" alt=""></p>
+
+        </div>
+        <div id="post-footer">
+            <div class="avatar" >
+                <img src="/avatar.jpg" alt="avatar"/>
+                
+                <a href="javascript:void(0)" class="high-song">high起来 &#128541;</a>
+                
+                
+                <a href="javascript:void(0)" class="donate fa">赠我一杯 &#128536;</a>
+                
+            </div>
+            <ul class="author-profile-section">
+                <li>
+                  
+                  Author:
+                  
+                    
+                    <a href="/about">Aich</a>
+                </li>
+                
+                <li>Published Date: <span>2018-10-20  15:36:31</span></li>
+                
+                <li>Updated Date: <span>2018-10-20  15:39:05</span></li>
+                
+                <li class="post-category">
+                    Categories:
+                    
+                </li>
+                <li class="post-tags">
+                    Tags:
+                    
+                </li>
+                
+                <li> License: <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
+知识共享署名-非商业性使用-禁止演绎 3.0 未本地化版本许可协议（CC BY-NC-ND 3.0）
+</a></li>
+                
+            </ul>
+            <div id="donate-wrap">
+                
+                
+                
+                <img src="/alipay.png" alt="支付宝付款" class="donate-img">
+                
+                <img src="/wechat.png" alt="微信付款" class="donate-img">
+                
+                
+            </div>
+        </div>
+    </article>
+    <div class="article-nav">
+        
+        
+        <a href="/2018/08/15/IDEA使用git上传-下载代码/" class="next-post fa">IDEA使用git上传-下载代码</a>
+        
+    </div>
     
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>未启用</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            -idea -git上传 -git下载
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">08/15</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="IDEA使用git上传-下载代码"
-              data-leadcloud-url="/2018/08/15/IDEA使用git上传-下载代码/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
+    <div id="comments">
+        
+
+<script>
+  gitment.render(document.getElementById("comments"));
+</script>
+
+
+
+    </div>
     
 </div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/08/08/大数据第三天-Hadoop完全分布式部署/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">大数据第三天-Hadoop完全分布式部署</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>大数据</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            -大数据 -Hadoop -Linux
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">08/08</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="大数据第三天-Hadoop完全分布式部署"
-              data-leadcloud-url="/2018/08/08/大数据第三天-Hadoop完全分布式部署/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/08/07/在CentOS上搭建GitLab/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">在CentOS上搭建GitLab</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>GitLab</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            -Liunx -CentOS -GitLab
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">08/07</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="在CentOS上搭建GitLab"
-              data-leadcloud-url="/2018/08/07/在CentOS上搭建GitLab/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/08/06/大数据第二天-mysql安装/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">大数据第二天-mysql安装</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>大数据</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            -Linux -mysql
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">08/06</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="大数据第二天-mysql安装"
-              data-leadcloud-url="/2018/08/06/大数据第二天-mysql安装/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/08/03/大数据第一天-Linux的基本操作/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">大数据第一天-Linux的基本操作</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>大数据</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            Linux
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">08/03</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="大数据第一天-Linux的基本操作"
-              data-leadcloud-url="/2018/08/03/大数据第一天-Linux的基本操作/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/08/01/IDEA-SSH编写踩到的一些坑-不定时更新/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">IDEA-SSH编写踩到的一些坑(不定时更新)</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>未启用</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            null
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">08/01</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="IDEA-SSH编写踩到的一些坑(不定时更新)"
-              data-leadcloud-url="/2018/08/01/IDEA-SSH编写踩到的一些坑-不定时更新/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/07/31/IDEA-SSM编写踩到的一些坑/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">IDEA-SSM编写踩到的一些坑</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>未启用</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            null
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">07/31</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="IDEA-SSM编写踩到的一些坑"
-              data-leadcloud-url="/2018/07/31/IDEA-SSM编写踩到的一些坑/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-      <li class="post-items" _href="/2018/07/28/关与Hexo的一些常用命令收集/">
-        <p class="info">2018</p>
-        <h2 class="post-item-title">关与Hexo的一些常用命令收集</h2>
-          <div class="article-meta">
-    
-    
-    <span class="categories-meta fa-wrap">
-            <i class="fa fa-folder-open-o"></i>
-        <span>未启用</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-         <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            null
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">07/28</span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-            <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="关与Hexo的一些常用命令收集"
-              data-leadcloud-url="/2018/07/28/关与Hexo的一些常用命令收集/"><i class="fa fa-spinner fa-spin"></i></span>
-    </span>
-    
-    
-</div>
-
-      </li>
-        
-    </ul>
-  </div>
-</div>
-
 
 
     </div>
@@ -574,8 +351,14 @@
     <li class="totop-btn fa fa-angle-up"></li>
     <li class="exchange-btn fa fa-exchange"></li>
   
+    <li class="toc-btn fa fa-list-ul"></li>
+    
     
 
+    
+    <li class="comment-btn fa fa-comments-o">
+        <a href="#comments" title="comments"></a>
+    </li>
     
 </ul>
 <p id="process"></p>
@@ -593,6 +376,8 @@
         </div>
     </div>
 </div>
+
+    
 
 
     <script src="/js/highsong.js"></script>
