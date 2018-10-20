@@ -5,7 +5,7 @@
     <entry>
         <title><![CDATA[测试]]></title>
         <url>https://%E8%89%BE%E5%B8%8C.xyz/2018/10/20/%E6%B5%8B%E8%AF%95/</url>
-        <content type="html"><![CDATA[<p><img src="测试/屏幕快照 2018-10-20 下午3.38.54.png" alt=""></p>
+        <content type="html"><![CDATA[<p><img src="测试/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-10-20%20%E4%B8%8B%E5%8D%883.38.54.png" alt=""></p>
 ]]></content>
         
         
@@ -317,16 +317,16 @@
     
     
     <entry>
-        <title><![CDATA[categories]]></title>
-        <url>https://%E8%89%BE%E5%B8%8C.xyz/categories/index.html</url>
-        <content type="html"></content>
-    </entry>
-    
-    <entry>
         <title><![CDATA[关于我]]></title>
         <url>https://%E8%89%BE%E5%B8%8C.xyz/about/index.html</url>
         <content type="html"><![CDATA[<p><img src="index/59834b996af31.gif" alt=""></p>
 <figure class="highlight plain"><figcaption><span>关于我</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">	&#123; </span><br><span class="line"></span><br><span class="line">​		name: &quot;Aich / Geekaholic&quot;,</span><br><span class="line">		birthday: &quot;1994-10-02&quot;, </span><br><span class="line">		gender: &quot;男&quot;, </span><br><span class="line">		address: &quot;山东省济宁市&quot;, </span><br><span class="line">		education: &quot;专科 / 徐州矿业大学&quot;, </span><br><span class="line">		major: &quot;软件工程&quot;, </span><br><span class="line">		Github: &quot;https://github.com/Aichs&quot;, </span><br><span class="line">		Microblog: &quot;https://weibo.com/u/3334540900&quot;,</span><br><span class="line">		skills: [&quot;HTML&quot;, &quot;CSS&quot;, &quot;JavaScript&quot;, &quot;jQuery&quot;, &quot;Java&quot;], </span><br><span class="line">		blog: &quot;https://coding.net/u/Aich&quot;, </span><br><span class="line">		Email: &quot;mingyuejiaobai@icloud.com&quot;, </span><br><span class="line">		description: [&quot;朝闻道,夕死可矣&quot;] </span><br><span class="line">	&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    </entry>
+    
+    <entry>
+        <title><![CDATA[categories]]></title>
+        <url>https://%E8%89%BE%E5%B8%8C.xyz/categories/index.html</url>
+        <content type="html"></content>
     </entry>
     
     <entry>
