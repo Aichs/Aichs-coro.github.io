@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://%E8%89%BE%E5%B8%8C.xyz/"/>
-  <updated>2018-10-24T12:00:01.888Z</updated>
+  <updated>2018-10-25T12:07:04.596Z</updated>
   <id>https://艾希.xyz/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Sqlserver的触发器and存储过程and跨库操作</title>
+    <link href="https://%E8%89%BE%E5%B8%8C.xyz/2018/10/25/Sqlserver%E7%9A%84%E8%A7%A6%E5%8F%91%E5%99%A8and%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8Band%E8%B7%A8%E5%BA%93%E6%93%8D%E4%BD%9C/"/>
+    <id>https://艾希.xyz/2018/10/25/Sqlserver的触发器and存储过程and跨库操作/</id>
+    <published>2018-10-25T12:01:22.000Z</published>
+    <updated>2018-10-25T12:07:04.596Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;触发器&quot;&gt;&lt;a href=&quot;#触发器&quot; class=&quot;headerlink&quot; title=&quot;触发器&quot;&gt;&lt;/a&gt;触发器&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;s
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>mysql的存储过程和定时任务</title>
     <link href="https://%E8%89%BE%E5%B8%8C.xyz/2018/10/22/mysql%E7%9A%84%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"/>
     <id>https://艾希.xyz/2018/10/22/mysql的存储过程和定时任务/</id>
     <published>2018-10-22T10:36:53.000Z</published>
-    <updated>2018-10-24T12:00:01.888Z</updated>
+    <updated>2018-10-25T12:00:27.752Z</updated>
     
     <summary type="html">
     

@@ -20,7 +20,7 @@
 <meta name="verify" content=all />
     <!--Title-->
 
-<title>IDEA-SSM编写踩到的一些坑 | Aich的博客</title>
+<title>Sqlserver的触发器and存储过程and跨库操作 | Aich的博客</title>
 
 <link rel="alternate" href="/atom.xml" title="Aich的博客" type="application/atom+xml">
 
@@ -200,9 +200,9 @@
     <article id="post">
         <div id="post-header">
 
-            <h1 id="IDEA-SSM编写踩到的一些坑">
+            <h1 id="Sqlserver的触发器and存储过程and跨库操作">
                 
-                IDEA-SSM编写踩到的一些坑
+                Sqlserver的触发器and存储过程and跨库操作
                 
             </h1>
             <div class="article-meta">
@@ -226,14 +226,14 @@
     
     <span class="fa-wrap">
         <i class="fa fa-clock-o"></i>
-        <span class="date-meta ">2018/07/31</span>
+        <span class="date-meta ">2018/10/25</span>
     </span>
     
     
     <span class="fa-wrap">
             <i class="fa fa-thermometer-three-quarters"></i>
-        <span class="hits hits-meta " data-leadcloud-title="IDEA-SSM编写踩到的一些坑"
-              data-leadcloud-url="/2018/07/31/IDEA-SSM编写踩到的一些坑/"><i class="fa fa-spinner fa-spin"></i></span>
+        <span class="hits hits-meta " data-leadcloud-title="Sqlserver的触发器and存储过程and跨库操作"
+              data-leadcloud-url="/2018/10/25/Sqlserver的触发器and存储过程and跨库操作/"><i class="fa fa-spinner fa-spin"></i></span>
     </span>
     
     
@@ -244,13 +244,7 @@
         </div>
         
         <div id="post-body">
-            <pre><code>在今天编写ssm项目的时候使用idea来作为开发工具，我也是最近才开始用idea的。
-</code></pre><p>idea和eclipse这些工具真的有很大的不同，刚刚由eclipse转过来的我就遇到了一些让人莫名其妙且恼火的事情。</p>
-<p></p><h5>Failed to load resource: the server responded with a status of 500/404 ()</h5><p></p>
-<p></p><h6>静态资源加载失败/找不到/</h6><br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213630.png" alt=""><br>    项目启动进来就报错资源加载失败!<br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213654.png" alt=""><br>    这里请求的路径是对的<br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213727.png" alt=""><br>    这是项目的目录结构，配置文件在sources目录下<br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213809.png" alt=""><br>    在jsp页面中我的引用路径<br>    <img src="IDEA-SSM编写踩到的一些坑/QQ图片20180731213845.png" alt=""><br>    路径是statics/下，和上图jsp页面对应，和页面请求对应。<p></p>
-<pre><code>综上所述，我的配置看起来是没有问题的，但是为什么会说资源加载失败呢？因为idea和其他开发工具不同，我在之前的项目中一直使用eclipse作为开发工具，配置文件可以直接放在src根目录下，但是idea不同，
-</code></pre><p>在未经设置的情况下，配置文件只能在sources文件夹下，而且，这个文件夹也是需要设置才可以被识别到的(其实也可能是后台代码写错了，比如sql语句)，其实做起来很简单,Ctrl+Alt+Shlft+s进入Project Structure面板,点击Modules-&gt;项目名(这里我的叫Flights)，<br>然后选中sources文件夹-&gt;Resources-&gt;Apply<br>    <img src="IDEA-SSM编写踩到的一些坑/截图.png" alt=""><br>    然后把项目跑起来,看看结果<br>    <img src="IDEA-SSM编写踩到的一些坑/结束.png" alt=""><br>    可以看到所有的数据都已经取到了，结束!</p>
-
+            <h1 id="触发器"><a href="#触发器" class="headerlink" title="触发器"></a>触发器</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#####打开触发器</span><br><span class="line"></span><br><span class="line">GO</span><br><span class="line">SET QUOTED_IDENTIFIER ON</span><br><span class="line">GO</span><br><span class="line"></span><br><span class="line">#### #定义一个触发器名叫TRG_SMS_LOG_RPT，绑定到tbl_sms_log表，在这个表更新后触发</span><br><span class="line"></span><br><span class="line">ALTER TRIGGER [dbo].[TRG_SMS_LOG_RPT]</span><br><span class="line">​		   ON  [dbo].[tbl_sms_log]</span><br><span class="line">​		   AFTER UPDATE</span><br><span class="line">​		AS </span><br><span class="line">​		BEGIN</span><br><span class="line"></span><br><span class="line">#### #触发后判断这张表里的Status字段是否有被更改，如果有，就开始触发器需要执行存储过程过程体</span><br><span class="line"></span><br><span class="line">​			IF UPDATE(Status)</span><br><span class="line">​			BEGIN</span><br><span class="line">​			</span><br><span class="line"></span><br><span class="line">undefined</span><br><span class="line"></span><br></pre></td></tr></table></figure>
         </div>
         <div id="post-footer">
             <div class="avatar" >
@@ -271,9 +265,9 @@
                     <a href="/about">Aich</a>
                 </li>
                 
-                <li>Published Date: <span>2018-07-31  21:22:04</span></li>
+                <li>Published Date: <span>2018-10-25  20:01:22</span></li>
                 
-                <li>Updated Date: <span>2018-08-03  22:12:07</span></li>
+                <li>Updated Date: <span>2018-10-25  20:07:04</span></li>
                 
                 <li class="post-category">
                     Categories:
@@ -303,10 +297,8 @@
     </article>
     <div class="article-nav">
         
-        <a href="/2018/08/01/IDEA-SSH编写踩到的一些坑-不定时更新/" class="pre-post fa fa-caret-left">IDEA-SSH编写踩到的一些坑(不定时更新)</a>
         
-        
-        <a href="/2018/07/28/关与Hexo的一些常用命令收集/" class="next-post fa">关与Hexo的一些常用命令收集</a>
+        <a href="/2018/10/22/mysql的存储过程和定时任务/" class="next-post fa">mysql的存储过程和定时任务</a>
         
     </div>
     
@@ -384,7 +376,7 @@
     </div>
 </div>
 
-    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">Failed to load resource: the server responded with a status of 500/404 ()</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">静态资源加载失败/找不到/</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#触发器"><span class="toc-number">1.</span> <span class="toc-text">触发器</span></a></li></ol>
 
 
     <script src="/js/highsong.js"></script>
